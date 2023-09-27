@@ -6,5 +6,6 @@ const secs = document.querySelectorAll('section');
 const h1 = secs[0].querySelector('h1');
 window.addEventListener('scroll', () => {
 	const scroll = window.scrollY;
-	h1.style.transform = `translateX(${scroll}px) rotate(${scroll}deg)`;
+	h1.style.transform = `translateX(${scroll}px) rotate(${scroll}deg) scale(${1 + scroll / 400})`;
+	h1.style.opacity = 1 - scroll / 400;
 });
