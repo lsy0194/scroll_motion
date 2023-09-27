@@ -48,5 +48,24 @@ body main .left {
   bottom: 0;
   left: 0;
 }
+body main .open {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  background: #111;
+  font: bold 14px/40px "arial";
+  color: #fff;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body main .open:hover {
+  background: hotpink;
+}
 
 /*# sourceMappingURL=style.css.map */
