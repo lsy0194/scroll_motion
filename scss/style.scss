@@ -11,6 +11,7 @@ body {
 		width: 60vw;
 		height: 60vh;
 		position: relative;
+		perspective: 900px;
 
 		.top {
 			width: 0%;
@@ -20,7 +21,7 @@ body {
 			top: 0;
 			left: 0;
 		}
-		.rigth {
+		.right {
 			width: 1px;
 			height: 0%;
 			background: #000;
@@ -37,14 +38,13 @@ body {
 			right: 0;
 		}
 		.left {
-			width: 0%;
-			height: 1px;
+			width: 1px;
+			height: 0%;
 			background: #000;
 			position: absolute;
-			bottom: 0;
 			left: 0;
+			bottom: 0;
 		}
-
 		.open {
 			display: inline-block;
 			width: 120px;
@@ -56,13 +56,33 @@ body {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			margin-left: -100px;
+			margin-left: -60px;
 			margin-top: -20px;
 			cursor: pointer;
 			transition: 0.5s;
-
+			&.off {
+				opacity: 0;
+			}
 			&:hover {
 				background: hotpink;
+			}
+		}
+
+		.content {
+			width: 100%;
+			height: 100%;
+			background: #111;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: -1;
+			transform: rotateY(220deg);
+			transition: opacity 1s, transform 1s;
+
+			&.on {
+				opacity: 1;
+				transform: rotateY(0deg);
 			}
 		}
 	}
