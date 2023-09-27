@@ -90,21 +90,34 @@ body main .content h2 {
   opacity: 0;
   transform: translateX(300px);
   transition: 1s 1s;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 body main .content p {
+  width: 80%;
   font: 16px/1.2 "arial";
   color: #ddd;
   opacity: 0;
   transform: translateX(300px);
   transition: 1s 1.8s;
 }
+body main .content .close {
+  width: 120px;
+  height: 40px;
+  background: #fff;
+  font: bold 16px/40px "arial";
+  color: #333;
+  cursor: pointer;
+  transition: 1s 2s;
+  opacity: 0;
+  transform: translateX(300px);
+}
 body main .content.on {
   opacity: 1;
   transform: rotateY(0deg);
 }
 body main .content.on h2,
-body main .content.on p {
+body main .content.on p,
+body main .content.on .close {
   opacity: 1;
   transform: translateX(0px);
 }

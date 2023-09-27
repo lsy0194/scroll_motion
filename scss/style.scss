@@ -83,14 +83,26 @@ body {
 				opacity: 0;
 				transform: translateX(300px);
 				transition: 1s 1s;
-				margin-bottom: 20px;
+				margin-bottom: 40px;
 			}
 			p {
+				width: 80%;
 				font: 16px/1.2 'arial';
 				color: #ddd;
 				opacity: 0;
 				transform: translateX(300px);
 				transition: 1s 1.8s;
+			}
+			.close {
+				width: 120px;
+				height: 40px;
+				background: #fff;
+				font: bold 16px/40px 'arial';
+				color: #333;
+				cursor: pointer;
+				transition: 1s 2s;
+				opacity: 0;
+				transform: translateX(300px);
 			}
 
 			&.on {
@@ -98,7 +110,8 @@ body {
 				transform: rotateY(0deg);
 
 				h2,
-				p {
+				p,
+				.close {
 					opacity: 1;
 					transform: translateX(0px);
 				}
