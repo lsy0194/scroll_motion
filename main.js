@@ -4,8 +4,18 @@
 */
 const secs = document.querySelectorAll('section');
 const h1 = secs[0].querySelector('h1');
+const h1_2 = secs[1].querySelector('h1');
+
 window.addEventListener('scroll', () => {
 	const scroll = window.scrollY;
+	const scroll_2 = scroll - secs[1].offsetTop;
 	h1.style.transform = `translateX(${scroll}px) rotate(${scroll}deg) scale(${1 + scroll / 400})`;
 	h1.style.opacity = 1 - scroll / 400;
+
+	if (scroll >= secs[1].offsetTop) {
+		h1_2.style.transform = `translateX(${scroll_2}px) rotate(${scroll_2}deg) scale(${
+			1 + scroll_2 / 400
+		})`;
+		h1_2.style.opacity = 1 - scroll_2 / 400;
+	}
 });
