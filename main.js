@@ -3,10 +3,8 @@
   DOM.offset().top : 전체페이지에 특정 DOM의 세로 위치값(정적)
 */
 const secs = document.querySelectorAll('section');
-
+const h1 = secs[0].querySelector('h1');
 window.addEventListener('scroll', () => {
 	const scroll = window.scrollY;
-	const pos3 = secs[2].offsetTop;
-	console.log('scroll ', scroll);
-	console.log('pos3 ', pos3);
+	h1.style.transform = `translateX(${scroll}px) rotate(${scroll}deg)`;
 });
