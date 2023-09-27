@@ -81,11 +81,32 @@ body main .content {
   opacity: 0;
   z-index: -1;
   transform: rotateY(220deg);
+  padding: 100px;
   transition: opacity 1s, transform 1s;
+}
+body main .content h2 {
+  font: bold 100px/1 "arial";
+  color: #fff;
+  opacity: 0;
+  transform: translateX(300px);
+  transition: 1s 1s;
+  margin-bottom: 20px;
+}
+body main .content p {
+  font: 16px/1.2 "arial";
+  color: #ddd;
+  opacity: 0;
+  transform: translateX(300px);
+  transition: 1s 1.8s;
 }
 body main .content.on {
   opacity: 1;
   transform: rotateY(0deg);
+}
+body main .content.on h2,
+body main .content.on p {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 /*# sourceMappingURL=style.css.map */
